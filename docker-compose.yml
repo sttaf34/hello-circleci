@@ -1,0 +1,11 @@
+version: "3"
+services:
+  application:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: yarn develop
+    volumes:
+      - ./src:/application/src
+    ports:
+      - "8500:8500"
